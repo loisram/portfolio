@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lois Ram Dico | Software Engineer</title>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            html {
+                scroll-padding-top: 80px;
+            }
+            .skill {
+                background: #FFF1F3;
+                color: #B56F76;
+                padding: 8px 16px;
+                border-radius: 999px;
+                font-weight: 600;
+                transition: 0.3s;
+                border: 1px solid #FAD7E0;
+            }
+            .skill:hover {
+                transform: translateY(-2px);
+                background: #B56F76;
+                color: white;
+                border-color: #B56F76;
+            }
+            .tag {
+                background: #F3F4F6;
+                color: #6B7280;
+                padding: 4px 10px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .burger-line {
+                transition: all 0.3s ease-in-out;
+            }
+            .active .line-1 {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .active .line-2 {
+                opacity: 0;
+            }
+            .active .line-3 {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        </style>
+    </head>
+
+    <body class="bg-[#FAFAFA] text-gray-800 overflow-x-hidden">
+        <header id="main-header" class="group fixed top-0 w-full z-50 transition-all duration-300">
+            <div id="menu-overlay" class="fixed inset-0 bg-black/10 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 group-[.active]:opacity-100 group-[.active]:pointer-events-auto md:hidden"></div>
+            <div class="relative bg-white/80 backdrop-blur-md border-b border-gray-100">
+                <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                    <div class="flex items-center space-x-3 z-50">
+                        <img src="profile.jpeg" loading="lazy" alt="Profile photo of Lois Ram Dico, Software Engineer" class="w-10 h-10 rounded-full border border-gray-100 shadow-sm">
+                        <span class="font-bold text-lg text-gray-700 tracking-wider uppercase">Lois Ram Dico</span>
+                    </div>
+                    <button type="button" id="menu-btn" aria-label="Toggle menu" class="relative z-50 w-10 h-10 flex flex-col justify-center items-center md:hidden outline-none">
+                        <span class="burger-line line-1 block w-6 h-0.5 bg-gray-500 mb-1.5"></span>
+                        <span class="burger-line line-2 block w-6 h-0.5 bg-gray-500 mb-1.5"></span>
+                        <span class="burger-line line-3 block w-6 h-0.5 bg-gray-500"></span>
+                    </button>
+                    <nav id="nav-menu" aria-label="Main Navigation" class="fixed top-0 right-0 h-screen w-3/4 max-w-sm bg-white/80 shadow-2xl translate-x-full transition-transform duration-500 flex flex-col pt-24 px-10 space-y-6 md:static md:h-auto md:w-auto md:max-w-none md:bg-transparent md:shadow-none md:translate-x-0 md:flex-row md:pt-0 md:px-0 md:space-y-0 md:space-x-8 lg:space-x-10 group-[.active]:translate-x-0">
+                        <a href="#home" class="nav-link text-sm font-bold text-gray-600 hover:text-[#B56F76] transition uppercase tracking-wider">Home</a>
+                        <a href="#about" class="nav-link text-sm font-bold text-gray-600 hover:text-[#B56F76] transition uppercase tracking-wider">About</a>
+                        <a href="#skills" class="nav-link text-sm font-bold text-gray-600 hover:text-[#B56F76] transition uppercase tracking-wider">Skills</a>
+                        <a href="#projects" class="nav-link text-sm font-bold text-gray-600 hover:text-[#B56F76] transition uppercase tracking-wider">Projects</a>
+                        <a href="#contact" class="nav-link text-sm font-bold text-gray-600 hover:text-[#B56F76] transition uppercase tracking-wider">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="flex flex-col justify-center items-center text-center bg-white min-h-screen pt-40 lg:pt-12 pb-20 lg:pb-0 px-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 tracking-tight text-gray-700">
+                    Hi, I'm <span class="text-[#B56F76]">Lois Ram Dico</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-6 font-medium">Software Engineer</p>
+                <p class="max-w-xl mx-auto text-gray-500 leading-relaxed text-md md:text-lg">
+                    Focused on building scalable web applications with a strong eye for detail and system reliability.
+                </p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/in/loisramdico" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white px-8 py-3 rounded-2xl hover:bg-black transition-all shadow-sm font-semibold text-sm md:text-base">LinkedIn</a>
+                    <a href="cv-2026.pdf" target="_blank" rel="noopener noreferrer" class="bg-white border border-gray-200 px-8 py-3 rounded-2xl hover:text-[#B56F76] transition-all shadow-sm font-semibold text-gray-600 text-sm md:text-base">Download CV</a>
+                </div>
+            </section>
+
+            <section id="about" class="px-6 py-10 md:py-20 bg-[#FDF8F8]">
+                <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl text-gray-700 font-bold mb-10 md:mb-16 border-l-4 border-[#B56F76] pl-4 tracking-widest uppercase">
+                        About Me
+                    </h2>
+                    <div class="space-y-6 text-gray-500 leading-relaxed text-base md:text-lg bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-[#F3E5E7]">
+                        <p>
+                            I’m a <span class="text-gray-700 font-semibold">Full-Stack Software Engineer</span> with a foundation in 
+                            <span class="text-gray-700 font-semibold">Enterprise Support at Accenture</span>, where I learned the importance 
+                            of system reliability and clear communication.
+                        </p>
+                        <p>
+                            Currently, I’m focused on product development, contributing to projects like 
+                            <a href="https://passnize.com" target="_blank" rel="noopener noreferrer" 
+                            class="text-[#B56F76] font-bold hover:underline decoration-2 underline-offset-4">
+                                Passnize
+                            </a>. 
+                            I enjoy the process of turning complex requirements into functional code using 
+                            <span class="text-gray-700 font-semibold">Nuxt</span> and <span class="text-gray-700 font-semibold">Scala</span>.
+                        </p>
+
+                        <p class="italic text-gray-400 border-t border-gray-50 pt-4">
+                            I’m always looking for ways to improve performance and write more maintainable code as I grow as an engineer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="px-6 py-10 md:py-20 bg-white">
+                <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl text-gray-700 font-bold mb-10 md:mb-16 border-l-4 border-[#B56F76] pl-4 tracking-widest uppercase">
+                        Technical Skills
+                    </h2>
+                    <div class="flex flex-col gap-10 md:gap-12">
+                        <div>
+                            <h3 class="pl-6 text-[#B56F76] font-bold text-xs uppercase tracking-widest mb-6 md:mb-8 border-b border-[#FFF1F3] pb-3">
+                                Frontend Development
+                            </h3>
+                            <div class="flex flex-wrap gap-3 md:gap-4 text-xs md:text-base px-4">
+                                <span class="skill">HTML/CSS</span>
+                                <span class="skill">JavaScript</span>
+                                <span class="skill">TypeScript</span>
+                                <span class="skill">Vue.js</span>
+                                <span class="skill">Nuxt 4</span>
+                                <span class="skill">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="pl-6 text-[#B56F76] font-bold text-xs uppercase tracking-widest mb-6 md:mb-8 border-b border-[#FFF1F3] pb-3">
+                                Backend & Database
+                            </h3>
+                            <div class="flex flex-wrap gap-4 text-xs md:text-base px-4">
+                                <span class="skill">Scala</span>
+                                <span class="skill">PostgreSQL</span>
+                                <span class="skill">MySQL</span>
+                                <span class="skill">Play Framework</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="pl-6 text-[#B56F76] font-bold text-xs uppercase tracking-widest mb-6 md:mb-8 border-b border-[#FFF1F3] pb-3">
+                                Tools & Testing
+                            </h3>
+                            <div class="flex flex-wrap gap-4 text-xs md:text-base px-4">
+                                <span class="skill">Cypress</span>
+                                <span class="skill">Git</span>
+                                <span class="skill">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-10 md:py-20 px-6 bg-[#FDF8F8]">
+                <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl text-gray-700 font-bold mb-10 md:mb-16 border-l-4 border-[#B56F76] pl-4 tracking-widest uppercase">
+                        Featured Projects
+                    </h2>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all border border-[#F3E5E7]">
+                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">
+                            Passnize Web App
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-500 mb-6 leading-relaxed">
+                            Contributed to a platform digitizing physical cards into data-rich digital assets.
+                            Focused on building responsive UI components and assisting in backend logic.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag bg-[#FFF1F3] text-[#B56F76]">Nuxt 4</span>
+                            <span class="tag bg-[#FFF1F3] text-[#B56F76]">Scala</span>
+                            <span class="tag bg-[#FFF1F3] text-[#B56F76]">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-10 md:py-20 px-6 bg-white">
+                <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto">
+                    <h2 class="text-2xl md:text-3xl text-gray-700 font-bold mb-8 md:mb-16 border-l-4 border-[#B56F76] pl-4 tracking-widest uppercase">
+                        Get In Touch
+                    </h2>
+                    <form id="contactForm" action="https://formspree.io/f/mdawokjk" method="POST" class="space-y-4 max-w-xl mx-auto">
+                        <label for="name" class="sr-only">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Name"
+                            class="text-sm md:text-base w-full border border-gray-100 bg-[#FFF9F9] rounded-2xl p-4 focus:ring-2 focus:ring-[#B56F76] focus:border-[#B56F76] focus:bg-white outline-none transition placeholder-gray-500"
+                        >
+                        <label for="email" class="sr-only">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="Email"
+                            class="text-sm md:text-base w-full border border-gray-100 bg-[#FFF9F9] rounded-2xl p-4 focus:ring-2 focus:ring-[#B56F76] focus:border-[#B56F76] focus:bg-white outline-none transition placeholder-gray-500"
+                        >
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            required
+                            placeholder="Message"
+                            class="resize-none text-sm md:text-base w-full border border-gray-100 bg-[#FFF9F9] rounded-2xl p-4 focus:ring-2 focus:ring-[#B56F76] focus:border-[#B56F76] focus:bg-white outline-none transition placeholder-gray-500"
+                        ></textarea>
+                        <button
+                            type="submit"
+                            class="text-sm md:text-base w-full bg-[#B56F76] text-white py-4 rounded-2xl font-bold hover:bg-[#9D6066] transition-all shadow-lg shadow-[#FCE7F3] flex justify-center items-center gap-2"
+                        >
+                            <span class="spinner hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                            <span class="btn-text">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-[#FDF8F8] border-t border-[#F3E5E7] pt-16 pb-8 px-6 md:px-10">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 space-y-8 md:space-y-0">
+                    <div class="max-w-md">
+                        <h3 class="font-bold text-gray-800 text-md md:text-lg mb-2 uppercase tracking-wider">LET'S WORK TOGETHER</h3>
+                        <p class="text-sm md:text-base text-gray-500 leading-relaxed">
+                            I'm currently looking for new opportunities to contribute and grow. If you have a project in mind, I'd love to hear from you.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 text-sm mb-4 uppercase tracking-wider">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/loisram" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-gray-800 hover:text-[#B56F76] transition-colors text-xl md:text-2xl">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/loisramdico" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-800 hover:text-[#B56F76] transition-colors text-xl md:text-2xl">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:dico.loisram@gmail.com" aria-label="Send Email" class="text-gray-800 hover:text-[#B56F76] transition-colors text-xl md:text-2xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border border-gray-200 mb-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-400 font-medium">
+                    <p>© <span id="year"></span> Lois Ram Dico • Built with Tailwind CSS</p>
+                    <p class="mt-2 md:mt-0">Based in Philippines 🇵🇭</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="toast" class="fixed top-6 right-6 bg-[#B56F76] text-white px-6 py-4 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+             <span class="font-medium">Message sent successfully!</span>
+        </div>
+
+        <script>
+            const header = document.getElementById('main-header');
+            const menuBtn = document.getElementById('menu-btn');
+
+            if(menuBtn && header){
+                menuBtn.addEventListener('click', () => {
+                    header.classList.toggle('active');
+                });
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => header.classList.remove('active'));
+            });
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const overlay = document.getElementById('menu-overlay');
+
+            if(overlay){
+                overlay.addEventListener('click', () => {
+                    header.classList.remove('active');
+                });
+            }
+
+            const contactForm = document.getElementById('contactForm');
+            const toast = document.getElementById('toast');
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+
+                const button = contactForm.querySelector('button');
+                const spinner = button.querySelector('.spinner');
+                const btnText = button.querySelector('.btn-text');
+
+                spinner.classList.remove('hidden');
+                btnText.classList.add('hidden');
+                button.disabled = true;
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: contactForm.method,
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        contactForm.reset();
+                        showToast("Message sent successfully!");
+                    } else {
+                        showToast("Oops! Something went wrong.", true);
+                    }
+                } catch (error) {
+                    showToast("Network error. Try again.", true);
+                } finally {
+                    spinner.classList.add('hidden');
+                    btnText.classList.remove('hidden');
+                    button.disabled = false;
+                }
+            });
+            function showToast(message, isError = false) {
+                toast.textContent = message;
+                toast.style.backgroundColor = isError ? "#F56565" : "#B56F76";
+                toast.classList.add('opacity-100', 'pointer-events-auto');
+
+                setTimeout(() => {
+                    toast.classList.remove('opacity-100', 'pointer-events-auto');
+                }, 3000);
+            }
+        </script>
+    </body>
+</html>
